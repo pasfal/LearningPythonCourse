@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+
 #Metodo 1: leggere csv da path assoluto
 stats = pd.read_csv('C:\\MyProjects\\PythonWorkspace\\LearningPython\\csv\\DemographicData.csv')
 
