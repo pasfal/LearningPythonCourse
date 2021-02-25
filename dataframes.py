@@ -9,7 +9,6 @@ print("Current Working Directory = ", os.getcwd())
 os.chdir("C:\\MyProjects\\PythonWorkspace\\LearningPython\\csv")
 stats2 = pd.read_csv('DemographicData.csv')
 
-
 #Visualizzazione CSV letti
 print(stats)
 print(stats2)
