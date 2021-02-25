@@ -172,7 +172,7 @@ DwayneWade_FTA = [803,535,467,771,702,652,297,425,258,370]
 FreeThrowAttempts = np.array([KobeBryant_FTA, JoeJohnson_FTA, LeBronJames_FTA, CarmeloAnthony_FTA, DwightHoward_FTA, ChrisBosh_FTA, ChrisPaul_FTA, KevinDurant_FTA, DerrickRose_FTA, DwayneWade_FTA])
 
 #per evitare eventuali errori causati da divisioni per zero
-#warnings.filterwarnings("ignore")
+warnings.filterwarnings("ignore")
 
 def plotData(dataToPlot, yLabel, xLabel='Seasons', xTicks=Seasons, playerList=Players):
 
