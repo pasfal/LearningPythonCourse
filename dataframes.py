@@ -43,3 +43,8 @@ print(stats.describe())
 
 #Statistiche sulle colonne numeriche (trasposta su righe)
 print(stats.describe().transpose())
+
+#Rinominare le colonne
+stats.columns = ['CountryName', 'CountryCode', 'BirthRate', 'InternetUsers', 'IncomeGroup']
+
+print(stats)
