@@ -48,3 +48,45 @@ print(stats.describe().transpose())
 stats.columns = ['CountryName', 'CountryCode', 'BirthRate', 'InternetUsers', 'IncomeGroup']
 
 print(stats)
+
+#--- Lezione 3: Subset from Data Frames
+
+# 1 - Rows Subsets
+print("\n******* Rows Subsets ******")
+print("\nRighe dalla 21ma alla 25ma:\n")
+print(stats[21: 26])
+
+print("\nRighe dalla 1ma alla 25ma:\n")
+print(stats[0: 26])
+
+print("\nRighe dalla 1ma alla 9a (partono da 0):\n")
+print(stats[0: 10]) #equivale a stats.head(10)
+
+print("\nRighe dalla 185ma fino alla fine:\n")
+print(stats[185 :])
+
+print("\nRighe dall'inizio alla fine, invertite:\n")
+print(stats[: : -1])
+
+print("\nUna riga ogni 10, dall'inizio alla fine del data frame:\n")
+print(stats[: : 10])
+
+# 2 - Columns Subset
+print("****** Columns Subsets ******\n")
+print("\nVisualizzazione colonna dei nomi delle nazioni:\n")
+print(stats["CountryName"])
+
+print("\nVisualizzazione della parte superiore della colonna (primi 5 valori) dei nomi delle nazioni:\n")
+print(stats["CountryName"].head())
+
+print("\nVisualizzazione dei primi 5 valori dei nomi delle nazioni e dei rispettivi Birth Rates:\n")
+#Ricordare le doppie quadre! L'ordine delle colonne è quello dato da noi
+print(stats[["CountryName", "BirthRate"]].head()) 
+print("\nQuick Access:\n")
+print(stats.BirthRate) #ecco perché è importante cambiare il nome alle colonne!
+
+# 3 - Combine Rows and Columns
+print("****** Combine Rows and Columns ******\n")
+#Prendo la porzione della tabella dalla riga 3 alla 7 
+#e come colonne il nome della Nazione, il tasso di natalità e l'Income Group
+print(stats[3:8][['CountryName', 'BirthRate', 'IncomeGroup']])
