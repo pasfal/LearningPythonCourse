@@ -1,7 +1,11 @@
-class ContoCorrente:
-    def __init__(self, nome, conto, importoIniziale):
+class Conto:
+    def __init__(self, nome, conto):
         self.nome = nome
         self.conto = conto
+
+class ContoCorrente(Conto):
+    def __init__(self, nome, conto, importoIniziale):
+        super().__init__(nome, conto)
         self.__saldo = importoIniziale
     
     @property
