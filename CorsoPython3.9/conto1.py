@@ -26,6 +26,15 @@ class ContoCorrente(Conto):
     def descrizione(self):
         print(f"Nome titolare del conto: {self.nome} - Numero conto: {self.conto} - Saldo: {self.__saldo}")
 
+
+class GestoreContiCorrenti:    
+    @staticmethod 
+    def bonifico(sorgente, destinazione, importo):
+        sorgente.preleva(importo)
+        destinazione.deposita(importo)
+
+
+
 contoCorrente1 = ContoCorrente("Mario Rossi", "IT12345", 150.25)
 contoCorrente2 = ContoCorrente("Anna Verdi", "IT57432", 650.70)
 
@@ -43,6 +52,9 @@ contoCorrente2.descrizione()
 contoCorrente2.deposita(400)
 contoCorrente2.descrizione()
 print(f"\nValore della property Saldo per Anna Verdi: {contoCorrente2.saldo} \n")
+
+GestoreContiCorrenti.bonifico(contoCorrente2, contoCorrente1, 200)
+print(f"Saldo conto corrente #1: {contoCorrente1.saldo} - Saldo conto corrente #2: {contoCorrente2.saldo}")
 
 #contoCorrente1.saldo = 5000
 #print(contoCorrente1.saldo)
