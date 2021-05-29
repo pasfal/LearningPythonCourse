@@ -2,12 +2,12 @@ import pandas as pd
 import os
 
 #Metodo 1: leggere csv da path assoluto
-stats = pd.read_csv('C:\\MyProjects\\GithubRepo\\LearningPythonCourse\\csv\\DemographicData.csv')
+stats = pd.read_csv('C:\\MyProjects\\GithubRepo\\LearningPythonCourse\\DataScienceLearning\\csv\\DemographicData.csv')
 
 #Metodo 2: Cambiamo la working directory
 print("Current Working Directory = ", os.getcwd())
 #Cambio working directory
-os.chdir("C:\\MyProjects\\GithubRepo\\LearningPythonCourse\\csv")
+os.chdir("C:\\MyProjects\\GithubRepo\\LearningPythonCourse\\DataScienceLearning\\csv")
 stats2 = pd.read_csv('DemographicData.csv')
 
 #Visualizzazione CSV letti (bisogna sempre verificare il numero di righe, per una questione di tracciabilità)
