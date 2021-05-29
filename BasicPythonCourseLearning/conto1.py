@@ -34,7 +34,6 @@ class GestoreContiCorrenti:
         destinazione.deposita(importo)
 
 
-
 contoCorrente1 = ContoCorrente("Mario Rossi", "IT12345", 150.25)
 contoCorrente2 = ContoCorrente("Anna Verdi", "IT57432", 650.70)
 
