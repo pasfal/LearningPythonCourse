@@ -14,6 +14,8 @@ queue = channel.queue_declare(queue="worker_queue")
 
 print("...Collegamento terminato")
 
+numberOfMessages = input('Numero di messaggi da inviare: ')
+
 cnt = 1
 
 while True:
@@ -24,7 +26,7 @@ while True:
 
     print(f"Trasmesso messaggio n. {cnt}\n")
 
-    if cnt > 100:
+    if cnt > int(numberOfMessages):
         break
 
 connection.close()
