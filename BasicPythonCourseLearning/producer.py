@@ -14,13 +14,13 @@ queue = channel.queue_declare(queue="worker_queue")
 
 print("...Collegamento terminato")
 
-cnt = 0
+cnt = 1
 
 while True:
     message = str(cnt)
     cnt += 1
     #pubblichiamo sulla coda
-    channel.basic_publish(exchange="", routing_key="working_queue", body=message)
+    channel.basic_publish(exchange="", routing_key="worker_queue", body=message)
 
     print(f"Trasmesso messaggio n. {cnt}\n")
 

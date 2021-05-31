@@ -19,7 +19,5 @@ def callback(channel, method, properties, msg):
 
 #Consume dei messaggi
 #no_ack=True -> non forniremo la ricevuta di ritorno (l'acknowlegment per la ricezione del messaggio)
-channel.basic_consume(callback, queue="worker_queue", no_ack=True)
+channel.basic_consume(queue='worker_queue', on_message_callback=callback, auto_ack=False)
 channel.start_consuming()
-
-connection.close()
