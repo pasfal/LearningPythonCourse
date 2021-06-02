@@ -18,6 +18,6 @@ def callback(channel, method, properties, msg):
     print(f"Ricevuto il messaggio {msg}\n")
 
 #Consume dei messaggi
-#auto_ack=False -> non forniremo la ricevuta di ritorno (l'acknowlegment per la ricezione del messaggio)
+#auto_ack=False -> non forniremo la ricevuta di ritorno (l'acknowledgement per la ricezione del messaggio)
 channel.basic_consume(queue='worker_queue', on_message_callback=callback, auto_ack=False)
 channel.start_consuming()
